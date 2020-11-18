@@ -26,11 +26,11 @@ cat index.html'''
 docker build -t mysiteweb:latest .
 '''
         sh '''# del previous docker container
-#docker stop mywebsite
-#docker container prune -f
+docker stop mywebsite
+docker container prune -f
 
 # Del of old image
-#docker rmi registry.me:5000/mysiteweb:latest
+docker rmi registry.me:5000/mysiteweb:latest
 
 # Upload to the local registry
 docker tag mysiteweb:latest registry.me:5000/mysiteweb:latest 
